@@ -596,6 +596,14 @@ class BookstoreSystem {
         orderQueue.enqueue(order);
         System.out.println("Order placed successfully!");
         System.out.println("Order ID: " + order.getId());
+        System.out.println("Items:");
+
+        for (int i = 0; i < order.getItems().size(); i++) {
+            OrderItem item = order.getItems().get(i);
+            System.out.println("- " + item.getBook().getTitle() +
+                    " x" + item.getQuantity() +
+                    " ($" + item.getBook().getPrice() * item.getQuantity() + ")");
+        }
         System.out.println("Total: $" + order.calculateTotal());
     }
 
@@ -648,6 +656,14 @@ class BookstoreSystem {
             System.out.println("\nOrder #" + count + ":");
             System.out.println("ID: " + order.getId());
             System.out.println("Customer: " + order.getCustomerName());
+            System.out.println("Items:");
+
+            for (int i = 0; i < order.getItems().size(); i++) {
+                OrderItem item = order.getItems().get(i);
+                System.out.println("- " + item.getBook().getTitle() +
+                        " x" + item.getQuantity() +
+                        " ($" + item.getBook().getPrice() * item.getQuantity() + ")");
+            }
             System.out.println("Status: " + order.getStatus());
             System.out.println("Total: $" + order.calculateTotal());
 
@@ -679,6 +695,14 @@ class BookstoreSystem {
             System.out.println("\nOrder #" + count + ":");
             System.out.println("ID: " + order.getId());
             System.out.println("Customer: " + order.getCustomerName());
+            System.out.println("Items:");
+
+            for (int i = 0; i < order.getItems().size(); i++) {
+                OrderItem item = order.getItems().get(i);
+                System.out.println("- " + item.getBook().getTitle() +
+                        " x" + item.getQuantity() +
+                        " ($" + item.getBook().getPrice() * item.getQuantity() + ")");
+            }
             System.out.println("Status: " + order.getStatus());
             System.out.println("Total: $" + order.calculateTotal());
 
